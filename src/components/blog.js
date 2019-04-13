@@ -1,9 +1,9 @@
 'use strict'
 
 import React from 'react'
-import { Link, Route } from 'react-router-dom'
+import { Link, Route, Switch } from 'react-router-dom'
 
-import { Post, NoPosts } from 'components/posts'
+import { Post, NoPosts, Post404 } from 'components/posts'
 
 const Blog = () => (
   <div>
@@ -12,9 +12,12 @@ const Blog = () => (
       <li><Link to='/blog/first-post'>First post</Link></li>
       <li><Link to='/blog/second-post'>Second post</Link></li>
     </ul>
-
-    <Route path='/blog/:post' component={Post} />
-    <Route path='/blog' exact component={NoPosts} />
+    
+    <Switch>
+      <Route path='/blog' exact component={NoPosts} />
+      <Route path='/blog/:post(first-post|second-post)' component={Post} />
+      <Route component={Post404} />
+    </Switch>
   </div>
 )
 

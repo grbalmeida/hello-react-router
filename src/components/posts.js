@@ -10,4 +10,8 @@ const NoPosts = () => (
   <p>Selecione um post</p>
 )
 
-export { Post, NoPosts }
+const Post404 = () => (
+  <h1>Esse post não existe</h1>
+)
+
+export { Post, NoPosts, Post404 }
