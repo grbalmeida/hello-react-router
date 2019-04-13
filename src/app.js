@@ -20,13 +20,13 @@ class App extends PureComponent {
             <li><Link to='/contact'>Contact</Link></li>
             <li><Link to='/blog'>Blog</Link></li>
           </ul>
-	  <Switch>
+	        <Switch>
             <Route path='/' exact component={Home} />
             <Route path='/about' component={About} />
             <Route path='/contact' component={Contact} />
             <Route path='/blog' component={Blog} />
-	    <Route component={Error404} />
-	  </Switch>
+	          <Route component={Error404} />
+	        </Switch>
         </div>
       </BrowserRouter>
     )
