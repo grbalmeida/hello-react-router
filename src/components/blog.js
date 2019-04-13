@@ -12,7 +12,7 @@ const Blog = () => (
       <li><Link to='/blog/first-post'>First post</Link></li>
       <li><Link to='/blog/second-post'>Second post</Link></li>
     </ul>
-    
+
     <Route path='/blog/:post' component={Post} />
     <Route path='/blog' exact component={NoPosts} />
   </div>
