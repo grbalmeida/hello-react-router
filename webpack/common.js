@@ -22,7 +22,7 @@ module.exports = {
   },
 
   htmlPluginConfig: {
-    title: 'My app',
+    title: 'Hello React Router',
     template: join(paths.src, 'html', 'template.html')
   },
 
