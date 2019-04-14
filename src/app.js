@@ -16,10 +16,10 @@ class App extends PureComponent {
       <BrowserRouter>
         <div>
           <ul>
-            <li><NavLink to='/' exact>Home</NavLink></li>
-            <li><NavLink to='/about'>About</NavLink></li>
-            <li><NavLink to='/contact'>Contact</NavLink></li>
-            <li><NavLink to='/blog' exact>Blog</NavLink></li>
+            <li><NavLink to={{ pathname: '/', state: { id: 'home' } }} exact>Home</NavLink></li>
+            <li><NavLink to={{ pathname: '/about', state: { id: 'about' } }}>About</NavLink></li>
+            <li><NavLink to={{ pathname: '/contact', state: { id: 'contact' } }}>Contact</NavLink></li>
+            <li><NavLink to={{ pathname: '/blog', state: { id: 'blog' } }} exact>Blog</NavLink></li>
             <li><a href='#site-info'>Site Info</a></li>
           </ul>
           <Switch>
