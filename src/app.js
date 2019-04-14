@@ -1,7 +1,13 @@
 'use strict'
 
 import React, { PureComponent } from 'react'
-import { BrowserRouter, NavLink, Route, Switch } from 'react-router-dom'
+import {
+  BrowserRouter,
+  NavLink,
+  Route,
+  Switch,
+  Redirect
+} from 'react-router-dom'
 
 import './css/style.css'
 import About from 'components/about'
@@ -30,12 +36,16 @@ class App extends PureComponent {
             <li><NavLink to={{ pathname: '/contact', state: { id: 'contact' } }}>Contact</NavLink></li>
             <li><NavLink to={{ pathname: '/blog', state: { id: 'blog' } }} exact>Blog</NavLink></li>
             <li><a href='#site-info'>Site Info</a></li>
+	    <li><NavLink to='/back-to-home'>Back to Home</NavLink></li>
+	    <li><NavLink to='/back-to-contact'>Back to Contact</NavLink></li>
           </ul>
           <Switch>
             <Route path='/' exact component={Home} />
             <Route path='/about' component={About} />
             <Route path='/contact' component={Contact} />
             <Route path='/blog' component={Blog} />
+	    <Redirect from='/back-to-contact' to='/contact' />
+	    <Route path='/back-to-home' render={() => <Redirect to='/' />} />
             <Route component={Error404} />
           </Switch>
           <div id='site-info' style={{ margin: '1000px 0' }}>
