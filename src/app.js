@@ -9,12 +9,18 @@ import Contact from 'components/contact'
 import Home from 'components/home'
 import Blog from 'components/blog'
 import Error404 from 'components/error-404'
+import GoBack from 'components/go-back'
+import GoForward from 'components/go-forward'
 
 class App extends PureComponent {
   render () {
     return (
       <BrowserRouter>
         <div>
+	  <ul>
+	    <li><GoBack /></li>
+	    <li><GoForward /></li>
+	  </ul>
           <ul>
             <li><NavLink to={{ pathname: '/', state: { id: 'home' } }} exact>Home</NavLink></li>
             <li><NavLink to={{ pathname: '/about', state: { id: 'about' } }}>About</NavLink></li>
