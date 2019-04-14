@@ -5,8 +5,9 @@ import { NavLink, Route, Switch } from 'react-router-dom'
 
 import { Post, NoPosts, Post404 } from 'components/posts'
 
-const Blog = () => (
+const Blog = ({ match }) => (
   <div>
+    {console.log('Blog Match: ', match)}
     <h1>Blog</h1>
     <ul>
       <li><NavLink to='/blog/first-post'>First post</NavLink></li>

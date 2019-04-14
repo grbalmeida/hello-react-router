@@ -2,8 +2,11 @@
 
 import React from 'react'
 
-const Home = () => (
-  <h1>Home</h1>
+const Home = ({ match }) => (
+  <div>
+    {console.log('Home Match: ', match)}
+    <h1>Home</h1>
+  </div>
 )
 
 export default Home
