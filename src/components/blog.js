@@ -5,8 +5,9 @@ import { NavLink, Route, Switch } from 'react-router-dom'
 
 import { Post, NoPosts, Post404 } from 'components/posts'
 
-const Blog = ({ match }) => (
+const Blog = ({ match, location }) => (
   <div>
+    {console.log('Blog Location: ', location)}
     {console.log('Blog Match: ', match)}
     <h1>Blog</h1>
     <ul>
