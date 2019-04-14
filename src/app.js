@@ -11,6 +11,7 @@ import Blog from 'components/blog'
 import Error404 from 'components/error-404'
 import GoBack from 'components/go-back'
 import GoForward from 'components/go-forward'
+import Go from 'components/go'
 
 class App extends PureComponent {
   render () {
@@ -20,6 +21,8 @@ class App extends PureComponent {
 	  <ul>
 	    <li><GoBack /></li>
 	    <li><GoForward /></li>
+	    <li><Go numberOfPages={-1} children={'Back a page'} /></li>
+	    <li><Go numberOfPages={1} children={'Forward a page'} /></li>
 	  </ul>
           <ul>
             <li><NavLink to={{ pathname: '/', state: { id: 'home' } }} exact>Home</NavLink></li>

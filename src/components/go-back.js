@@ -6,7 +6,7 @@ import { Route } from 'react-router-dom'
 const GoBack = () => (
   <Route>
     {({ history }) => (
-      <button onClick={(e) => history.goBack()}>{'<-'}Voltar</button>
+      <button onClick={(e) => history.goBack()}>{'<-'}Go Back</button>
     )}
   </Route>
 )
