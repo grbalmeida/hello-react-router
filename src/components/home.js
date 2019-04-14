@@ -2,8 +2,9 @@
 
 import React from 'react'
 
-const Home = ({ match, location }) => (
+const Home = ({ match, location, history }) => (
   <div>
+    {console.log('Home History: ', history)}
     {console.log('Home Location: ', location)}
     {console.log(
        'Home Location Search:',

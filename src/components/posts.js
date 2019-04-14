@@ -2,8 +2,9 @@
 
 import React from 'react'
 
-const Post = ({ match, location }) => (
+const Post = ({ match, location, history }) => (
   <div>
+    {console.log('Post History: ', history)}
     {console.log('Post Location: ', location)}
     {console.log('Post Match: ', match)}
     <h2>Post: {match.params.post}</h2>
@@ -14,8 +15,9 @@ const NoPosts = ({ numberOfPosts }) => (
   <p>Selecione um dos {numberOfPosts} posts</p>
 )
 
-const Post404 = ({ match, location }) => (
+const Post404 = ({ match, location, history }) => (
   <div>
+    {console.log('Post404 History: ', history)}
     {console.log('Post404 Location: ', location)}
     {console.log('Post404 Match: ', match)}
     <h1>Esse post não existe</h1>
