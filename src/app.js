@@ -25,30 +25,30 @@ class App extends PureComponent {
     return (
       <BrowserRouter>
         <div>
-	  <ul>
-	    <li><GoBack /></li>
-	    <li><GoForward /></li>
-	    <li><Go numberOfPages={-1} children={'Back a page'} /></li>
-	    <li><Go numberOfPages={1} children={'Forward a page'} /></li>
-	  </ul>
+	        <ul>
+	          <li><GoBack /></li>
+	          <li><GoForward /></li>
+	          <li><Go numberOfPages={-1} children={'Back a page'} /></li>
+	          <li><Go numberOfPages={1} children={'Forward a page'} /></li>
+	        </ul>
           <ul>
             <li><NavLink to={{ pathname: '/', state: { id: 'home' } }} exact>Home</NavLink></li>
             <li><NavLink to={{ pathname: '/about', state: { id: 'about' } }}>About</NavLink></li>
             <li><NavLink to={{ pathname: '/contact', state: { id: 'contact' } }}>Contact</NavLink></li>
             <li><NavLink to={{ pathname: '/blog', state: { id: 'blog' } }} exact>Blog</NavLink></li>
             <li><a href='#site-info'>Site Info</a></li>
-	    <li><NavLink to='/back-to-home'>Back to Home</NavLink></li>
-	    <li><NavLink to='/back-to-contact'>Back to Contact</NavLink></li>
-	    <li><NavLink to='/register'>Register</NavLink></li>
+	          <li><NavLink to='/back-to-home'>Back to Home</NavLink></li>
+	          <li><NavLink to='/back-to-contact'>Back to Contact</NavLink></li>
+	          <li><NavLink to='/register'>Register</NavLink></li>
           </ul>
           <Switch>
             <Route path='/' exact component={Home} />
             <Route path='/about' component={About} />
             <Route path='/contact' component={Contact} />
             <Route path='/blog' component={Blog} />
-	    <Redirect from='/back-to-contact' to='/contact' />
-	    <Route path='/back-to-home' render={() => <Redirect to='/' />} />
-	    <Route path='/register' component={Register} />
+	          <Redirect from='/back-to-contact' to='/contact' />
+	          <Route path='/back-to-home' render={() => <Redirect to='/' />} />
+	          <Route path='/register' component={Register} />
             <Route component={Error404} />
           </Switch>
           <div id='site-info' style={{ margin: '1000px 0' }}>
