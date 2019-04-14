@@ -20,7 +20,7 @@ class App extends PureComponent {
             <li><NavLink to='/about'>About</NavLink></li>
             <li><NavLink to='/contact'>Contact</NavLink></li>
             <li><NavLink to='/blog' exact>Blog</NavLink></li>
-	    <li><a href='#site-info'>Site Info</a></li>
+            <li><a href='#site-info'>Site Info</a></li>
           </ul>
           <Switch>
             <Route path='/' exact component={Home} />
@@ -29,9 +29,9 @@ class App extends PureComponent {
             <Route path='/blog' component={Blog} />
             <Route component={Error404} />
           </Switch>
-	  <div id='site-info' style={{ margin: '1000px 0' }}>
-	    <h1>Site Info</h1>
-	  </div>
+          <div id='site-info' style={{ margin: '1000px 0' }}>
+            <h1>Site Info</h1>
+          </div>
         </div>
       </BrowserRouter>
     )
