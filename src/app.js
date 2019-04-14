@@ -18,6 +18,7 @@ import Error404 from 'components/error-404'
 import GoBack from 'components/go-back'
 import GoForward from 'components/go-forward'
 import Go from 'components/go'
+import Register from 'components/register'
 
 class App extends PureComponent {
   render () {
@@ -38,6 +39,7 @@ class App extends PureComponent {
             <li><a href='#site-info'>Site Info</a></li>
 	    <li><NavLink to='/back-to-home'>Back to Home</NavLink></li>
 	    <li><NavLink to='/back-to-contact'>Back to Contact</NavLink></li>
+	    <li><NavLink to='/register'>Register</NavLink></li>
           </ul>
           <Switch>
             <Route path='/' exact component={Home} />
@@ -46,6 +48,7 @@ class App extends PureComponent {
             <Route path='/blog' component={Blog} />
 	    <Redirect from='/back-to-contact' to='/contact' />
 	    <Route path='/back-to-home' render={() => <Redirect to='/' />} />
+	    <Route path='/register' component={Register} />
             <Route component={Error404} />
           </Switch>
           <div id='site-info' style={{ margin: '1000px 0' }}>
