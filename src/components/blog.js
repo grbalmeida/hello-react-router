@@ -14,7 +14,7 @@ const Blog = () => (
     </ul>
 
     <Switch>
-      <Route path='/blog' exact component={NoPosts} />
+      <Route path='/blog' exact render={() => <NoPosts numberOfPosts={2} />} />
       <Route path='/blog/:post(first-post|second-post)' component={Post} />
       <Route component={Post404} />
     </Switch>

@@ -6,8 +6,8 @@ const Post = ({ match }) => (
   <h2>Post: {match.params.post}</h2>
 )
 
-const NoPosts = () => (
-  <p>Selecione um post</p>
+const NoPosts = ({ numberOfPosts }) => (
+  <p>Selecione um dos {numberOfPosts} posts</p>
 )
 
 const Post404 = () => (
